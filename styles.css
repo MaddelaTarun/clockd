@@ -8,6 +8,7 @@ body {
     background-position: center;
     background-size: cover; */
 }
+
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -65,6 +66,7 @@ body {
 
 #clock-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -84,6 +86,27 @@ body {
     border-radius: 30px;
 }
 
+#clock-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#clock-controls button {
+    font-family: "Manrope",sans-serif;
+    font-weight:500 ;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.1s ease;
+}
+
+#clock-controls button:hover {
+    opacity: 0.3;
+}
 
 body.dark {
     background-color: white;
@@ -105,4 +128,8 @@ body.dark .material-symbols-outlined {
 body.dark #clock {
     color: #1e1e1e;
     backdrop-filter: blur(10px);
+}
+
+body.dark #clock-controls button {
+    color: #1e1e1e;
 }
