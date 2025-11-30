@@ -25,7 +25,7 @@ Commit: `0e2b158`
 
 ---
 
-## [0.1.2] — 30 Nov, 2025 — 08:23 PM
+## [0.1.2] — 30 Nov, 2025 — 12:23 AM
 ### Added
 - Implemented 12-hour / 24-hour time format toggle for the clock.
 
