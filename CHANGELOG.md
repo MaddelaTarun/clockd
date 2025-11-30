@@ -22,3 +22,11 @@ Commit: `3405587`
 - Updated logo styling to make it appear bolder.
 
 Commit: `0e2b158`
+
+---
+
+## [0.1.2] — 30 Nov, 2025 — 08:23 PM
+### Added
+- Implemented 12-hour / 24-hour time format toggle for the clock.
+
+Commit: `50fba8a`
