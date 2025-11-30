@@ -1,0 +1,108 @@
+body {
+    font-family: "Manrope", sans-serif;
+    /* font-weight: bold; */
+    margin: 0;
+    background-color: #1e1e1e;
+    color: white;
+    /* background-image: url(img.jpg);
+    background-position: center;
+    background-size: cover; */
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid white;
+}
+
+#nav-left .logo {
+    font-family: "Manrope", sans-serif;
+    /* font-weight: 700; */
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+#nav-center {
+    display: flex;
+    gap: 30px;
+}
+
+#nav-center a {
+    font-family: "Manrope", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+#nav-center a:hover {
+    opacity: 0.3;
+}
+
+#nav-right button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24,;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* border: 2px solid; */
+}
+
+#clock {
+    font-family: "Fira Code", sans-serif;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    /* backdrop-filter: blur(10px); */
+    /* width: 100%; */
+    /* border: 2px solid; */
+    padding: 20px 40px;
+    border-radius: 30px;
+}
+
+
+body.dark {
+    background-color: white;
+    color: #1e1e1e;
+}
+
+body.dark #navbar {
+    border-bottom: 1px solid #1e1e1e;
+    /* border-bottom-color: rgba(255,255,255,0.3); */
+}
+
+body.dark #nav-left .logo,
+body.dark #nav-center a,
+body.dark #nav-right button,
+body.dark .material-symbols-outlined {
+    color: #1e1e1e;
+}
+
+body.dark #clock {
+    color: #1e1e1e;
+    backdrop-filter: blur(10px);
+}
