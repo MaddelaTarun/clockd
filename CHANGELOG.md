@@ -25,8 +25,16 @@ Commit: `0e2b158`
 
 ---
 
-## [0.1.2] — 30 Nov, 2025 — 12:23 AM
+## [0.1.2] — 1 Dec, 2025 — 12:23 AM
 ### Added
 - Implemented 12-hour / 24-hour time format toggle for the clock.
 
 Commit: `50fba8a`
+
+---
+
+## [0.1.3] — 1 Dec, 2025 — 6:20 PM
+### Added
+- Implemented toggle to hide/show seconds in the digital clock.
+
+Commit: `92756c8`
