@@ -54,5 +54,13 @@ formatToggle.addEventListener("click", () => {
     updateClock();
 })
 
+secondsToggle.addEventListener("click", () => {
+    showSeconds = !showSeconds;
+
+    secondsToggle.textContent = showSeconds ? "[ hide seconds ]" : "[ show seconds ]"
+
+    updateClock();
+})
+
 updateClock();
 setInterval(updateClock,1000)
