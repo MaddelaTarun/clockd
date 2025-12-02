@@ -123,7 +123,6 @@ body.dark {
 
 body.dark #navbar {
     border-bottom: 1px solid #1e1e1e;
-    /* border-bottom-color: rgba(255,255,255,0.3); */
 }
 
 body.dark #nav-left .logo,
@@ -135,7 +134,6 @@ body.dark .material-symbols-outlined {
 
 body.dark #clock {
     color: #1e1e1e;
-    /* backdrop-filter: blur(10px); */
 }
 
 body.dark #clock-controls button {
@@ -161,12 +159,12 @@ body.dark #clock-controls button {
   
   #intro-overlay.visible {
     opacity: 1;
-    transform: translateY(0);          /* slide into center */
+    transform: translateY(0);
   }
   
   #intro-overlay.hidden {
     opacity: 0;
-    transform: translateY(-100%);      /* slide back up */
+    transform: translateY(-100%);
     pointer-events: none;
   }
   
