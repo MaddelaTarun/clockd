@@ -33,8 +33,57 @@ Commit: `50fba8a`
 
 ---
 
-## [0.1.3] — 1 Dec, 2025 — 6:20 PM
+## [0.1.3] — 1 Dec, 2025 — 06:20 PM
 ### Added
 - Implemented toggle to hide/show seconds in the digital clock.
 
 Commit: `92756c8`
+
+---
+
+## [0.1.4] — 1 Dec, 2025 — 07:10 PM
+### Changed
+- Updated changelog documentation.
+
+Commit: `63730e0`
+
+---
+
+## [0.1.5] — 2 Dec, 2025 — 12:10 AM
+### Changed
+- Further documentation refinements in changelog.
+
+Commit: `824317a`
+
+---
+
+## [0.1.6] — 2 Dec, 2025 — 12:11 AM
+### Changed
+- Additional minor changelog updates.
+
+Commit: `c985c78`
+
+---
+
+## [0.1.7] — 2 Dec, 2025 — 04:17 PM
+### Changed
+- Minor HTML restructuring and organization for readability.
+
+Commit: `0c91641`
+
+---
+
+## [0.1.8] — 2 Dec, 2025 — **06:41 PM**
+### Improved
+- Aesthetic improvements across UI elements.
+- Better spacing, alignment, and cleaner visual hierarchy.
+
+Commit: `e2851db`
+
+---
+
+## [0.1.9] — 2 Dec, 2025 — 04:19 PM
+### Removed
+- Removed unnecessary comments across project files for cleaner codebase.
+
+Commit: `7f713a2`
