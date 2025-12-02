@@ -9,16 +9,19 @@ const screens = document.querySelectorAll(".screen");
 const timerMessage = document.getElementById("timer-message");
 const stopWatchMessage = document.getElementById("stopwatch-message");
 
+const introOverlay = document.getElementById("intro-overlay");
+const introText = document.getElementById("intro-text");
+
 let is24Hour = true;
 let showSeconds = true;
 
 themeButton.addEventListener("click", ()=> {
     document.body.classList.toggle("dark");
 
-    const isLight = document.body.classList.contains("dark");
+    const isDark = document.body.classList.contains("dark");
 
-    sun.style.display = isLight ? "inline" : "none";
-    moon.style.display = isLight ? "none" : "inline";
+    sun.style.display = isDark ? "inline" : "none";
+    moon.style.display = isDark ? "none" : "inline";
 })
 
 function updateClock() {
@@ -52,48 +55,29 @@ function updateClock() {
 
 navLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const screenName = link.dataset.screen;
-        const targetScreen = document.getElementById(`screen-${screenName}`);
-        if(!targetScreen) return;
-
-        screens.forEach((screen) => {
-            screen.style.display = "none";
-        })
-
-        targetScreen.style.display = "block";
-
-        if(screenName === "timer" && timerMessage) {
-            timerMessage.textContent = "still in progress";
-        }
-
-        if(screenName === "stopwatch" && stopWatchMessage) {
-            stopWatchMessage.textContent = "still in progress";
-        }
-    })
-})
-
-
-// navLinks.forEach((link) => {
-//     link.addEventListener("click", (event) => {
-//       event.preventDefault();
+      event.preventDefault();
+      runIntro();
   
-//       const screenName = link.dataset.screen;
-//       const targetScreen = document.getElementById(`screen-${screenName}`);
-//       if (!targetScreen) return;
+      const screenName = link.dataset.screen;
+      const targetScreen = document.getElementById(`screen-${screenName}`);
+      if (!targetScreen) return;
   
-//       // hide all screens
-//       screens.forEach((screen) => {
-//         screen.style.display = "none";
-//       });
+      screens.forEach((screen) => {
+        screen.style.display = "none";
+      });
   
-//       // show the selected screen
-//       targetScreen.style.display = "block";
+      targetScreen.style.display = "block";
   
-//       // when timer is selected, show "still in progress"
-//       if (screenName === "timer" && timerMessage) {
-//         timerMessage.textContent = "still in progress
+      if (screenName === "timer" && timerMessage) {
+        timerMessage.textContent = "still in progress";
+      }
+  
+      if (screenName === "stopwatch" && stopWatchMessage) {
+        stopWatchMessage.textContent = "still in progress";
+      }
+    });
+  });
+
 
 formatToggle.addEventListener("click", () => {
     is24Hour = !is24Hour;
@@ -111,5 +95,34 @@ secondsToggle.addEventListener("click", () => {
     updateClock();
 })
 
+function runIntro() {
+    if (!introOverlay || !introText) return;
+  
+    introText.textContent = "";
+    introOverlay.classList.remove("hidden");
+    introOverlay.classList.add("visible");
+  
+    const word = "CLOCKD";
+    let index = 0;
+  
+    setTimeout(() => {
+      const typingInterval = setInterval(() => {
+        introText.textContent += word[index];
+        index++;
+  
+        if (index === word.length) {
+          clearInterval(typingInterval);
+  
+          setTimeout(() => {
+            introOverlay.classList.remove("visible");
+            introOverlay.classList.add("hidden");
+          }, 500);
+        }
+      }, 120);
+    }, 600);
+  }
+
 updateClock();
-setInterval(updateClock,1000)
+setInterval(updateClock,1000);
+
+runIntro();

@@ -141,3 +141,35 @@ body.dark #clock {
 body.dark #clock-controls button {
     color: #1e1e1e;
 }
+
+#intro-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-size: 3rem;
+    z-index: 9999;
+  
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  #intro-overlay.visible {
+    opacity: 1;
+    transform: translateY(0);          /* slide into center */
+  }
+  
+  #intro-overlay.hidden {
+    opacity: 0;
+    transform: translateY(-100%);      /* slide back up */
+    pointer-events: none;
+  }
+  
+  .intro-quotes {
+    opacity: 0.7;
+  }
